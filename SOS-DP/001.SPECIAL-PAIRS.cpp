@@ -23,7 +23,6 @@ ll solve(ll mask,ll pos){
      else{
        ret+=solve(mask,pos-1);
      }
-
      return dp[mask][pos]=ret;
 }
 
