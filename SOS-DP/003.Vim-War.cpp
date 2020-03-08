@@ -1,4 +1,5 @@
 //https://www.hackerrank.com/contests/w16/challenges/vim-war/submissions/code/1321628847
+//Top-down
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long 
@@ -101,6 +102,7 @@ int main(){
 
 
 //------------------------------------
+//Bottum-UP
 #include<bits/stdc++.h>
 #define MOD 1000000007
 #define LLD long long int
