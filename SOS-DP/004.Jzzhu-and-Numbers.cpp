@@ -25,9 +25,9 @@ int main(){
       
     }
     //sum over super set not subset
+    ll leaf=20;
     for(ll i=19;i>=0;i--){
-      //as -1 make no sense we cosiderthe leaf pos as the 20 th pos
-       ll nex=(i>0)?i-1:20;
+       ll nex=(i>0)?i-1:leaf;
        for(ll  mask=0;mask<(1<<20);mask++){
             if(mask & (1<<i))
                dp[mask^(1<<i)][nex]+=dp[mask][i];
@@ -39,10 +39,10 @@ int main(){
     ll ans=0;
     for(ll  mask=0;mask<(1<<20);mask++){
         if(__builtin_popcount(mask)%2){
-           ans = (ans - po[dp[mask][20]]+mod)%mod;
+           ans = (ans - po[dp[mask][leaf]]+mod)%mod;
         }
         else{
-           ans = (ans + po[dp[mask][20]]+mod)%mod;
+           ans = (ans + po[dp[mask][leaf]]+mod)%mod;
         }
     }
  
