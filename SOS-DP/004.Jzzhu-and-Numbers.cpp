@@ -24,7 +24,7 @@ int main(){
       cin>>ar[i],dp[ar[i]][19]++;
       
     }
- 
+    //sum over super set not subset
     for(ll i=19;i>=0;i--){
       //as -1 make no sense we cosiderthe leaf pos as the 20 th pos
        ll nex=(i>0)?i-1:20;
@@ -35,7 +35,7 @@ int main(){
        }
  
     }
- 
+    // inclusion-exclusion
     ll ans=0;
     for(ll  mask=0;mask<(1<<20);mask++){
         if(__builtin_popcount(mask)%2){
