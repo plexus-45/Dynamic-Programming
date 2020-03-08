@@ -6,7 +6,7 @@ using namespace std;
 
 const int N=1ll<<20;
 int cnt[N],dp[N][20];
-
+//sos -- sum of sebsets
 ll solve(ll mask,ll pos){
 
      if(pos==-1){
