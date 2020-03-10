@@ -88,6 +88,7 @@ int C[(1<<20)+100];
 int D=0;
 int sum=0;
 int cnt=1;
+
 void add1(){
     A[val]++;
 }
