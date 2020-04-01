@@ -7,7 +7,7 @@ int a[12][12];
 int kadane(int *arr){
 
 	int sum=0,max_sum=INT_MIN;
-  int fin=-1;
+        int fin=-1;
 	for(int i=0;i<n;i++){
         sum+=arr[i];
         if(sum<0){
