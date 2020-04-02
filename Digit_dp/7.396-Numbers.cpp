@@ -1,3 +1,5 @@
+// https://www.spoj.com/problems/NUMTSN/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,8 +33,6 @@ ll digit_dp(int pos,bool flag,int cn3,int cn6,int cn9){
     return flag? ans : ret=ans;
 
 }
-
-
 
 ll  process(string x){
    v=x;
