@@ -1,3 +1,30 @@
+/*
+It's Valentine's Day in Russia today. as we all know number of girls in Russia is more than number of boys :P hence boys have an extra advantage while choosing girl for the valentine evening. Each boy has certain number of chocolates and each girl has certain number of candies. Now you being the anchor of evening wants to pair all the boys with girls such that the sum of absolute difference between boy's chocolate and girl's candy in a pair is minimized. Ofcourse some of the girls will remain unpaired but that's okay as we are in Russia :P
+Input Format
+
+The first line consists of two integers N and M. then follow N integers in second line. Then follow M integers in third line. M >= N
+Constraints
+
+1 <= N <= 5000 1 <= M <= 5000 M >= N 1 <= chocolates <= 1000000 1 <= candies <= 1000000
+Output Format
+
+The only line which consists of required sum of absolute differences.
+Sample Input
+
+2 5
+4 5
+1 2 3 4 5
+
+Sample Output
+
+0
+
+Explanation
+
+we can pair boy numbered 1 with girl numbered 4 and boy numbered 2 with girl numbered 5
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX 50000000000
@@ -20,11 +47,11 @@ ll valentine(vector<ll> &choc,vector<ll> &candy,ll i,ll j){
     ll q2 = valentine(choc,candy,i,j+1) ;                  // Do not pair
 
     dp[i][j] = min(q1,q2);
-
     return dp[i][j]; 
 }
 
 int main() {
+    
     ll n ; //No of boys
     ll m ; //No of girls
     cin >> n >> m;
